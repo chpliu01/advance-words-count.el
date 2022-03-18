@@ -120,7 +120,7 @@ verbosely."
 %s
 ========================================
 "
-       "Ns:%d, Al:%d, Ln:%d, An:%d, %s")
+       "Characters (no space):%d, ALL Characters:%d, Lines:%d, ANSCII:%d, %s")
      (cadr list)
      (- end start)
      (count-lines start end)
@@ -128,12 +128,12 @@ verbosely."
      (if (= 0 (car list))
          (format (if arg
                      " Latin Words ................... %d\n"
-                   "La:%d")
+                   "Lation:%d")
                  (count-words start end))
        (format (if arg
                    " CJK Chars ..................... %d
  Word Count .................... %d\n"
-                 "Ha:%d, Wc:%d")
+                 "CJK:%d, Total:%d")
                (car list)
                (+ (car list) (car (last list))))))))
 
